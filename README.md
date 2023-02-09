@@ -4,4 +4,5 @@ Gibbs sampling or a Gibbs sampler is a Markov chain Monte Carlo (MCMC) algorithm
 
 This code is an example of applying Gibbs sampling algorithm to determine the epicenter of an earthquake
 
-![Epicenter Gibbs Sampler](https://user-images.githubusercontent.com/113156229/216310690-848322ad-6e5c-4b76-84f1-55a2d6a399e4.png)
+![Epicenter Gibbs Sampler](https://user-images.githubusercontent.com/113156229/217713380-d12d2c92-efac-4e92-8ae1-a44ca689c8ca.png)
+

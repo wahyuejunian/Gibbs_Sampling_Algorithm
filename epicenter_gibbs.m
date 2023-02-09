@@ -81,6 +81,11 @@ for iter =1:niter
     y_new(iter) = y1;
 
 end
+tpred=1/vp*sqrt((xsts-x_new).^2+(ysts-y_new).^2);
+err = mean(sqrt((tpred-tobs).^2));
+[mine,idx]=min(err);
+xbest = x_new(idx);
+ybest = y_new(idx);
 %=======================================================================
 %% Visualisasi;
 fh=figure(1);
@@ -89,7 +94,7 @@ hold on
 plot(x0,y0,'*r','Linewidth',2,'MarkerSize',10)
 plot(xsts,ysts,'v','MarkerSize',8,'MarkerFaceColor','k','MarkerEdgeColor','r')
 plot(xaw,yaw,'s','color','k','MarkerSize',8,'MarkerFaceColor','#0000FF')
-plot(x_new(end),y_new(end),'s','color','k','MarkerSize',8,'MarkerFaceColor','#FF0000')
+plot(xbest,ybest,'s','color','k','MarkerSize',8,'MarkerFaceColor','#FF0000')
 title('Determination of Earthquake Epicenter using Gibbs Sampling Algorithm')
 ylabel('y-location')
 xlabel('x-location')
